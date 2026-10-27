@@ -1,0 +1,216 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Denah Kanwil Ditjenpas Sulsel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f6efe2;--panel:#fffdf8;--ink:#1c2433;--mut:#667085;--line:#e2d9c8;--wall:#2b3a55;--floor:#fbf7ef;--cor:#eadfc9;--mar:#e6dccb;--acc:#e8590c;--route:#0ca678;
+--work:#cfe3ff;--lead:#ffe3a3;--adm:#e1d6ff;--svc:#c3f0df;--wat:#bfe9fb;--out:#d4efc2;--com:#f3ecdc;--stair:#e9d8bd;--road:#d9dde3;--grass:#e3f3d3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--panel:#161e33;--ink:#edf1fa;--mut:#9aa6c0;--line:#2a3558;--wall:#9fb4de;--floor:#1a2340;--cor:#2b3354;--mar:#232c4a;--acc:#ff922b;--route:#38d9a9;--work:#243f6e;--lead:#5a4516;--adm:#3a3166;--svc:#17503f;--wat:#164a63;--out:#1f4a2c;--com:#222c4c;--stair:#4a3f2b;--road:#262e45;--grass:#14301f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--panel:#161e33;--ink:#edf1fa;--mut:#9aa6c0;--line:#2a3558;--wall:#9fb4de;--floor:#1a2340;--cor:#2b3354;--mar:#232c4a;--acc:#ff922b;--route:#38d9a9;--work:#243f6e;--lead:#5a4516;--adm:#3a3166;--svc:#17503f;--wat:#164a63;--out:#1f4a2c;--com:#222c4c;--stair:#4a3f2b;--road:#262e45;--grass:#14301f;color-scheme:dark}
+*{box-sizing:border-box}
+:root{--f1:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--f2:"DM Sans","Segoe UI",system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--f2);padding:20px max(16px,env(safe-area-inset-right,0px)) 32px max(16px,env(safe-area-inset-left,0px))}
+.w{max-width:1500px;margin:0 auto;display:grid;gap:16px}
+h1{font:800 clamp(28px,4.5vw,50px)/1 var(--f1);margin:4px 0 6px;letter-spacing:-.02em}h1 span{color:var(--acc)}
+.eb{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+header p{margin:0;color:var(--mut);max-width:70ch}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--panel);border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}
+.bar label{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+select,.b{font:500 14px var(--f2);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer;max-width:100%}
+.b.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.m{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px;align-items:start}
+@media(max-width:960px){.m{grid-template-columns:minmax(0,1fr)}}
+.cv{background:var(--panel);border:1.5px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 14px 44px -18px rgba(20,30,60,.35)}
+.sc{overflow-x:auto;padding:8px}
+svg{display:block;width:100%;min-width:1500px;height:auto}
+.hint{display:none;font-size:12px;color:var(--mut);padding:8px 14px 0}@media(max-width:960px){.hint{display:block}}
+.lg{display:flex;flex-wrap:wrap;gap:8px 16px;padding:12px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--mut)}
+.lg i{display:inline-block;width:14px;height:14px;border-radius:5px;margin-right:6px;vertical-align:-3px;border:1.5px solid var(--wall)}
+.r{cursor:pointer}
+.r .bx{fill:var(--c);stroke:var(--wall);stroke-width:4;filter:drop-shadow(0 8px 8px rgba(20,30,60,.16));transition:.15s}
+#r-lobi .bx{fill:var(--mar)}#r-tamu .bx{fill:var(--mar);stroke-dasharray:14 10}#r-plaza .bx{fill:var(--road);stroke-dasharray:14 10}
+.r:hover .bx{stroke:var(--acc);stroke-width:7}.r.on .bx{stroke:var(--acc);stroke-width:10}
+.r:focus-visible{outline:none}.r:focus-visible .bx{stroke:var(--acc);stroke-width:10}
+.t{font-family:var(--f1);font-weight:800;fill:var(--ink);text-anchor:middle;pointer-events:none}
+.s{font-family:var(--f2);font-weight:500;fill:var(--mut);text-anchor:middle;pointer-events:none}
+.ic{text-anchor:middle;pointer-events:none}
+.fu{fill:var(--floor);stroke:var(--wall);stroke-width:2.5;opacity:.92;pointer-events:none}
+.dr{stroke:var(--acc);stroke-width:12;stroke-linecap:round}
+.rt{fill:none;stroke:var(--route);stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 30;animation:fl 1s linear infinite;pointer-events:none}
+.rb{fill:none;stroke:var(--panel);stroke-width:28;stroke-linecap:round;stroke-linejoin:round;opacity:.85;pointer-events:none}
+@keyframes fl{to{stroke-dashoffset:-62}}
+@media(prefers-reduced-motion:reduce){.rt{animation:none;stroke-dasharray:none}}
+aside{background:var(--panel);border:1.5px solid var(--line);border-radius:22px;padding:20px;display:grid;gap:12px;position:sticky;top:12px}
+aside .big{font-size:44px;line-height:1}aside h2{font:800 24px/1.1 var(--f1);margin:0}aside p{margin:0;color:var(--mut)}
+.st{background:var(--bg);border-radius:12px;padding:10px 12px;font-size:14px}
+.st b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--route)}
+.pill{justify-self:start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:99px;background:var(--c);border:1.5px solid var(--wall)}
+footer{font-size:12px;color:var(--mut)}
+</style></head><body><div class="w">
+<header><div class="eb">Panduan pengunjung</div><h1>Denah <span>Kanwil</span> Ditjenpas</h1>
+<p>Kantor Wilayah Direktorat Jenderal Pemasyarakatan Sulawesi Selatan. Ketuk ruangan untuk melihat keterangannya, atau pilih tujuan agar rute dari pintu utama muncul.</p></header>
+<div class="bar"><label for="d">Menuju ke</label><select id="d"></select><button class="b" id="x" type="button">Hapus rute</button></div>
+<div class="m"><section class="cv"><div class="hint">Geser denah ke samping untuk melihat seluruhnya.</div><div class="sc"><svg id="v" viewBox="0 0 2900 1800" role="img" aria-label="Denah kantor"></svg></div><div class="lg" id="lg"></div></section><aside id="p" aria-live="polite"></aside></div>
+<footer>Denah ilustrasi, tidak berskala. Tata letak mengikuti foto dan penjelasan Anda; dispenser, tanaman, papan informasi, dan perabot hanyalah hiasan.</footer></div>
+<script>
+(function(){
+var K={work:["Ruang kerja","--work"],lead:["Pimpinan","--lead"],adm:["Pendukung","--adm"],svc:["Fasilitas","--svc"],wat:["Wudhu","--wat"],out:["Area luar","--out"],com:["Area bersama","--com"],stair:["Tangga","--stair"]};
+/* id,x,y,w,h,kind,icon,label,sub,fs,ty(baseline offset, omit=center) */
+var R=[
+["taman",40,90,330,360,"out","🌳","Taman Cafe","Coffee & Conversations",36,100],
+["kantin",40,470,330,100,"svc","☕","Kantin Luar","",30],
+["parkU",40,590,330,320,"out","🛵","Parkir Umum","Depan pintu kedua",34,80],
+["wuo",40,970,120,200,"wat","💧","Wudhu","Outdoor",24],
+["masjid",170,970,200,200,"out","🕌","Masjid","",38],
+["lorL",450,90,680,100,"com","🚬","Lorong Samping","Tempat duduk (area merokok)",30],
+["lorR",1770,90,680,100,"com","🚬","Lorong Samping","Tempat duduk (area merokok)",30],
+["resep",1330,100,240,90,"svc","🛎️","Resepsionis","",30],
+["tamu",1180,240,540,400,"com","🪑","Ruang Tunggu","Tamu menunggu",38,80],
+["teknis",450,220,690,420,"work","🏛️","Bidang Teknis","Pemasyarakatan",46,105],
+["tu",1760,220,690,240,"adm","🗂️","Bidang Tata Usaha","dan Umum",46,105],
+["kepala",1760,480,500,160,"lead","⭐","Kepala Kanwil","",42,100],
+["tangga",2280,480,170,100,"stair","🪜","Tangga","",28],
+["ob",2280,590,170,50,"adm","🧹","OB","",26],
+["aula",600,800,500,360,"com","🎤","Aula","2 pintu",48,100],
+["lobi",1150,800,600,390,"com","","","",1],
+["kagab",1780,800,150,360,"adm","📦","Kagabtum","",30],
+["gudk",1940,800,40,360,"adm","","","",1],
+["gud",1990,800,140,360,"adm","📦","Gudang","",30],
+["wcCewe",2160,800,100,360,"svc","🚺","WC Cewe","",26],
+["wud1",2268,1000,34,150,"wat","💧","","",1],
+["wud2",2308,1000,34,150,"wat","💧","","",1],
+["wcCowo",2350,800,100,360,"svc","🚹","WC Cowo","",26],
+["plaza",1100,1225,700,260,"com","🎖️","Pelataran Pintu Utama","",34,225],
+["pos",1880,1260,200,110,"svc","💂","Pos Jaga","",28],
+["parkir",480,1560,1940,200,"out","🚗","Parkiran Pegawai","Mobil · motor · sepeda",42,85]];
+var D={
+taman:["Taman dengan cafe outdoor dan payung, tempat duduk santai bagi pegawai dan tamu. Tamannya sangat luas.",["Dari pintu kedua, taman ada di sebelah kanan"]],
+kantin:["Kantin luar di dekat taman, enak untuk sekadar ngopi.",[]],
+parkU:["Parkir umum untuk motor, tepat di depan pintu kedua.",[]],
+wuo:["Tempat wudhu outdoor di samping masjid.",[]],
+masjid:["Masjid di luar gedung, dekat parkiran. Dari pintu kedua, masjid ada di sebelah kiri.",[]],
+lorL:["Lorong samping kiri dengan tempat duduk. Dipakai untuk merokok.",[]],
+lorR:["Lorong samping kanan dengan tempat duduk, dekat pintu lorong samping. Dipakai untuk merokok.",[]],
+resep:["Meja resepsionis berlapis marmer putih di bawah tembok nama kantor. Lapor ke sini lebih dulu.",["Ada petugas yang melayani"]],
+tamu:["Ruang tunggu di tengah lobi: 4 kursi panjang (2 kiri, 2 kanan) dan meja di tengah.",["Diapit Bidang Teknis dan Bidang TU"]],
+teknis:["Ruangan sangat lebar dan panjang di kiri lobi. Pintu kaca buram berlogo menghadap ruang tunggu.",["Berhadapan dengan Bidang Tata Usaha dan Umum"]],
+tu:["Ruangan sangat lebar dan panjang di kanan lobi. Pintunya besar dan menghadap ruang tunggu.",["Berhadapan dengan Bidang Teknis"]],
+kepala:["Ruangan Kepala Kanwil, tepat di bawah Bidang TU. Temboknya berhadapan dengan tembok Bidang Teknis. Pintu kaca bertulis Kepala Kantor Wilayah.",[]],
+tangga:["Tangga besar naik ke lantai 2, di ujung kanan koridor.",["Denah lantai 2 belum dibuat"]],
+ob:["Ruangan di bawah tangga, dipakai petugas kebersihan (OB).",["Bukan area umum"]],
+aula:["Aula di sisi kiri koridor dengan 2 pintu, dekat pintu kedua.",[]],
+lobi:["Lobi setelah pintu utama. Lurus ke ruang tunggu dan resepsionis, atau belok kiri/kanan ke koridor.",[]],
+kagab:["Ruang Kagabtum, pertama di sisi kanan koridor. Pintunya menghadap koridor.",[]],
+gudk:["Gudang kecil di antara Kagabtum dan gudang besar.",[]],
+gud:["Ruang gudang. Setelah gudang ada lorong WC di sebelah kanan.",[]],
+wcCewe:["WC perempuan, berhadapan dengan WC cowo.",["Di tengah lorong ada 2 tempat wudhu tertutup"]],
+wcCowo:["WC laki-laki, berhadapan dengan WC cewe.",["Di tengah lorong ada 2 tempat wudhu tertutup"]],
+wud1:["Tempat wudhu tertutup (1 dari 2) di tengah lorong WC. Ujung lorong buntu.",[]],
+wud2:["Tempat wudhu tertutup (2 dari 2) di tengah lorong WC. Ujung lorong buntu.",[]],
+plaza:["Pelataran di depan pintu utama, tempat pegawai dan taruna berkumpul. Lantainya paving heksagon.",[]],
+pos:["Pos jaga petugas di halaman depan.",[]],
+parkir:["Parkiran pegawai untuk mobil, motor, dan sepeda, di depan gedung.",["Jalan menuju parkiran pegawai lewat belokan dekat masjid"]]};
+var S="M1450 1195 ",C=720;
+var RT={
+resep:[S+"V200","Dari pintu utama jalan lurus melewati ruang tunggu. Resepsionis di ujung lobi."],
+tamu:[S+"V440","Dari pintu utama jalan lurus. Ruang tunggu ada di tengah lobi."],
+teknis:[S+"V520 H1142","Jalan lurus sampai ruang tunggu. Pintu Bidang Teknis di sisi kiri."],
+tu:[S+"V340 H1758","Jalan lurus sampai ruang tunggu. Pintu Bidang TU di sisi kanan."],
+kepala:[S+"V540 H1758","Jalan lurus melewati ruang tunggu. Ruangan Kepala Kanwil di sisi kanan."],
+aula:[S+"V"+C+" H850 V802","Belok kiri di koridor. Aula ada di sisi kiri bawah."],
+kagab:[S+"V"+C+" H1855 V802","Belok kanan di koridor. Pintu Kagabtum di sisi kanan."],
+gud:[S+"V"+C+" H2060 V802","Belok kanan, lewati Kagabtum. Gudang di sisi kanan."],
+wcCewe:[S+"V"+C+" H2305 V895 H2262","Belok kanan sampai lorong WC, belok kanan lagi. WC cewe di sisi kiri."],
+wcCowo:[S+"V"+C+" H2305 V895 H2348","Belok kanan sampai lorong WC, belok kanan lagi. WC cowo di sisi kanan."],
+wud1:[S+"V"+C+" H2305 V1070","Menuju lorong WC. Dua tempat wudhu tertutup ada di tengah, ujung lorong buntu."],
+tangga:[S+"V"+C+" H2365 V590","Belok kanan, jalan lurus sampai ujung koridor. Tangga ada di ujung."],
+pintuK:[S+"V"+C+" H424","Masuk lalu belok kiri, jalan lurus sampai ujung koridor."],
+taman:[S+"V"+C+" H395 V280 H340","Keluar lewat pintu kedua di ujung kiri, lalu belok kanan menuju taman."],
+kantin:[S+"V"+C+" H395 V520 H340","Keluar lewat pintu kedua, lalu menyusuri jalan ke arah kantin."],
+parkU:[S+"V"+C+" H395 H340","Keluar lewat pintu kedua. Parkir umum tepat di depannya."],
+masjid:[S+"V"+C+" H395 V1070 H368","Keluar lewat pintu kedua, lalu masjid ada di sebelah kiri."],
+pos:[S+"V1320 H1878","Keluar lewat pintu utama. Pos jaga ada di halaman depan, sisi kanan."],
+parkir:[S+"V1320 H900 V1600","Keluar lewat pintu utama, lalu menuju parkiran pegawai di depan gedung."]};
+var DS=[["resep","Meja Resepsionis"],["tamu","Ruang Tunggu"],["teknis","Bidang Teknis Pemasyarakatan"],["tu","Bidang Tata Usaha dan Umum"],["kepala","Kepala Kanwil"],["aula","Aula"],["kagab","Ruang Kagabtum"],["gud","Gudang"],["wcCowo","WC Cowo"],["wcCewe","WC Cewe"],["wud1","Tempat Wudhu (dalam)"],["tangga","Tangga ke Lantai 2"],["pintuK","Pintu Kedua"],["taman","Taman Cafe"],["kantin","Kantin Luar"],["parkU","Parkir Umum"],["masjid","Masjid"],["pos","Pos Jaga"],["parkir","Parkiran Pegawai"]];
+var v=document.getElementById("v"),P=document.getElementById("p"),sel=document.getElementById("d");
+function e(n,a){return '<'+n+' '+Object.keys(a).map(function(k){return k+'="'+a[k]+'"'}).join(' ')+'/>'}
+function tx(x,y,z,t,c){return '<text class="'+(c||"ic")+'" x="'+x+'" y="'+y+'" font-size="'+z+'">'+t+'</text>'}
+function desks(x,y,c,r,dx,dy){var s="";for(var i=0;i<c;i++)for(var j=0;j<r;j++){var X=x+i*dx,Y=y+j*dy;s+=e("rect",{class:"fu",x:X,y:Y,width:60,height:28,rx:5})+e("circle",{class:"fu",cx:X+30,cy:Y+42,r:9})}return s}
+function tree(x,y,r){return e("circle",{cx:x,cy:y,r:r,fill:"#2f9e44",opacity:.75})+e("circle",{cx:x-r/3,cy:y-r/3,r:r/2,fill:"#69db7c",opacity:.8})}
+function car(x,y,c){return e("rect",{x:x,y:y,width:76,height:38,rx:12,fill:c,stroke:"var(--wall)","stroke-width":2.5})+e("rect",{x:x+44,y:y+6,width:17,height:26,rx:5,fill:"#fff",opacity:.7})}
+function moto(x,y,c){return e("rect",{x:x,y:y,width:44,height:18,rx:9,fill:c,stroke:"var(--wall)","stroke-width":2})}
+function deco(){var s="",i;
+s+=e("rect",{x:10,y:10,width:2880,height:1780,rx:34,fill:"var(--grass)",stroke:"var(--line)","stroke-width":4,"stroke-dasharray":"14 12"});
+s+=e("rect",{x:380,y:60,width:60,height:1140,fill:"var(--road)"});
+s+=e("rect",{x:1100,y:1200,width:700,height:300,rx:10,fill:"var(--road)"});
+s+=e("rect",{x:420,y:1500,width:2060,height:290,rx:24,fill:"var(--road)"});
+s+=e("rect",{x:420,y:60,width:2060,height:1140,rx:22,fill:"var(--floor)",stroke:"var(--wall)","stroke-width":12});
+s+=e("rect",{x:422,y:660,width:2056,height:120,fill:"var(--cor)"});
+s+=e("rect",{x:2260,y:780,width:90,height:380,fill:"var(--cor)"});
+s+=e("rect",{x:1140,y:62,width:620,height:1136,fill:"var(--mar)"});
+for(i=0;i<9;i++)s+=e("path",{d:"M"+(1160+i*70)+" 70 L"+(1100+i*80)+" 1190",stroke:"var(--wall)","stroke-width":2,opacity:.07,fill:"none"});
+s+=e("rect",{x:1330,y:830,width:240,height:300,rx:20,fill:"none",stroke:"var(--acc)","stroke-width":3,"stroke-dasharray":"4 14",opacity:.5,"stroke-linecap":"round"});
+s+=tx(1450,1000,26,"VOID DOUBLE-HEIGHT","s");
+s+=tx(800,731,26,"KORIDOR UTAMA","s")+tx(2000,731,26,"KORIDOR UTAMA","s")+tx(1450,731,26,"KORIDOR UTAMA","s")+tx(2305,830,20,"LORONG WC","s");
+s+=tx(1450,1135,28,"LOBI UTAMA","s");
+s+=e("rect",{x:1310,y:64,width:280,height:30,rx:8,fill:"var(--wall)"})+'<text x="1450" y="86" text-anchor="middle" font-size="17" font-weight="700" fill="var(--floor)">KANWIL DITJENPAS SULSEL</text>';
+/* entrance steps + canopy */
+for(i=0;i<4;i++)s+=e("rect",{x:1360-i*14,y:1205+i*14,width:180+i*28,height:12,rx:4,fill:"var(--cor)",stroke:"var(--wall)","stroke-width":2.5});
+return s}
+function fur(){var s="",i,j;
+s+=desks(490,395,5,3,125,80);s+=desks(1800,395,5,1,128,0);
+s+=e("rect",{class:"fu",x:2160,y:570,width:90,height:44,rx:8})+e("rect",{class:"fu",x:1775,y:530,width:34,height:96,rx:12})+e("rect",{class:"fu",x:1840,y:575,width:80,height:50,rx:25});
+for(i=0;i<12;i++)for(j=0;j<3;j++)s+=e("rect",{class:"fu",x:640+i*34,y:960+j*34,width:22,height:22,rx:6});
+s+=e("rect",{class:"fu",x:700,y:1095,width:300,height:36,rx:8});
+[[1215,380],[1215,500],[1665,380],[1665,500]].forEach(function(p){s+=e("rect",{class:"fu",x:p[0],y:p[1],width:30,height:100,rx:10})});
+s+=e("rect",{class:"fu",x:1325,y:380,width:40,height:200,rx:10})+e("rect",{class:"fu",x:1535,y:380,width:40,height:200,rx:10});
+s+=e("rect",{class:"fu",x:1370,y:120,width:160,height:34,rx:12});
+for(i=0;i<8;i++)s+=e("line",{x1:2290,x2:2440,y1:492+i*10,y2:492+i*10,stroke:"var(--wall)","stroke-width":2,opacity:.7});
+for(i=0;i<5;i++){s+=e("rect",{class:"fu",x:2172,y:850+i*40,width:30,height:28,rx:6})+e("rect",{class:"fu",x:2408,y:850+i*40,width:30,height:28,rx:6})}
+for(i=0;i<5;i++)s+=e("rect",{class:"fu",x:2000+i*0,y:830+i*0,width:0,height:0});
+[[40,250],[70,360],[320,350]].forEach(function(t){s+=e("rect",{class:"fu",x:80+t[0]/2,y:t[1]-10,width:70,height:44,rx:22})});
+s+=tx(210,330,60,"⛱️")+tx(330,260,44,"⛵")+tx(120,420,34,"🪴");
+[[110,130,40],[300,150,34],[60,230,30]].forEach(function(t){s+=tree(t[0],t[1],t[2])});
+for(i=0;i<4;i++)for(j=0;j<7;j++)s+=moto(70+j*45,690+i*55,["#e03131","#1c7ed6","#2b2b2b","#12b886","#f59f00"][(i+j)%5]);
+[[110,30],[2650,200,50],[2700,520,44],[2620,860,52],[2740,1120,46],[2600,1400,50],[2760,1650,44],[560,1300,46],[700,1380,40],[880,1280,44],[2150,1330,46],[2300,1430,40],[2420,1310,44],[2640,1700,40],[160,1300,50],[250,1420,40],[90,1500,44]].forEach(function(t){s+=tree(t[0],t[1],t[2]||30)});
+s+=tx(1250,1355,70,"🇮🇩")+tx(1650,1355,52,"🪴")+tx(1170,1290,44,"🪴")+tx(1400,1415,38,"🚶🚶🚶")+tx(1540,1330,34,"🧑‍✈️🧑‍✈️");
+for(i=0;i<6;i++)s+=car(620+i*115,1690,["#fa5252","#228be6","#fab005","#7950f2","#12b886","#ff922b"][i]);
+for(i=0;i<14;i++)s+=moto(1380+i*54,1700,"var(--wall)");
+/* lobby & building decor */
+s+=tx(1180,845,50,"🪴")+tx(1720,845,50,"🪴")+tx(1180,1160,50,"🪴")+tx(1720,1160,50,"🪴")+tx(1180,1010,44,"🚰")+tx(1720,1010,44,"📋")+tx(1720,930,38,"🗑️");
+s+=tx(1180,290,44,"🪴")+tx(1720,290,44,"🪴")+tx(1450,640,34,"⛲");
+s+=tx(1100,690,34,"🖼️🖼️")+tx(470,830,44,"🛋️")+tx(470,1000,44,"🪴")+tx(470,1150,44,"🛋️")+tx(1140,790,36,"📺");
+s+=tx(600,150,38,"🪴")+tx(1090,150,38,"🪴")+tx(1800,150,38,"🪴")+tx(2410,150,38,"🪴")+tx(2240,1100,34,"💧")+tx(2230,1010,30,"🧼");
+return s}
+function doors(){var s="",L=[[1140,440,1140,560],[1760,290,1760,390],[1760,505,1760,600],[1140,110,1140,180],[1760,110,1760,180],[740,790,740,850],[900,790,900,850],[1815,790,1895,790],[2025,790,2095,790],[2262,860,2262,940],[2348,860,2348,940],[2320,650,2410,650],[424,675,424,765],[1370,1198,1530,1198],[2268,790,2342,790]];
+L.forEach(function(l){s+=e("line",{class:"dr",x1:l[0],y1:l[1],x2:l[2],y2:l[3]})});
+s+=tx(1450,1182,26,"PINTU UTAMA","t");s+=tx(520,650,22,"PINTU KEDUA ◀","s");
+return s}
+function rooms(){var s="";R.forEach(function(r){var k=K[r[5]],big=r[9]>1,fs=r[9],cx=r[1]+r[3]/2,cy=r[2]+r[4]/2;
+s+='<g class="r" id="r-'+r[0]+'" tabindex="0" role="button" aria-label="'+(r[7]||r[0])+'" style="--c:var('+k[1]+')">'+e("rect",{class:"bx",x:r[1],y:r[2],width:r[3],height:r[4],rx:16});
+if(big){
+if(r[4]<70)s+=tx(cx,cy+fs*.35,fs,r[6]+" "+r[7],"t");
+else if(r[10]!==undefined){var ty=r[2]+r[10];s+=tx(cx,ty-fs-4,Math.min(fs*1.15,54))+tx(cx,ty,fs,r[7],"t")+(r[8]?tx(cx,ty+fs*.8,Math.max(20,fs*.55),r[8],"s"):"")}
+else if(r[3]<130||r[4]<110)s+=tx(cx,cy-6,fs*1.1,r[6])+tx(cx,cy+fs*1.1,fs,r[7],"t");
+else s+=tx(cx,cy-(r[8]?fs*.6:fs*.3),Math.min(fs*1.4,54),r[6])+tx(cx,cy+fs*(r[8]?.5:.7),fs,r[7],"t")+(r[8]?tx(cx,cy+fs*1.3,Math.max(20,fs*.55),r[8],"s"):"")}
+else if(r[6])s+=tx(cx,r[2]+36,32,r[6]);
+s+='</g>'});return s}
+v.innerHTML=deco()+rooms()+fur()+doors()+'<g id="rt"></g><g><circle cx="1450" cy="1195" r="20" fill="var(--route)" stroke="var(--panel)" stroke-width="7"/><text x="1490" y="1240" font-size="28" font-weight="700" fill="var(--route)" style="font-family:var(--f2)">Mulai di sini</text></g>'+tx(2560,1560,30,"▲ UTARA","t");
+document.getElementById("lg").innerHTML=Object.keys(K).map(function(k){return '<span><i style="background:var('+K[k][1]+')"></i>'+K[k][0]+'</span>'}).join("")+'<span><i style="background:var(--acc);border-color:var(--acc)"></i>Pintu</span>';
+sel.innerHTML='<option value="">Pilih tujuan…</option>'+DS.map(function(d){return '<option value="'+d[0]+'">'+d[1]+'</option>'}).join("");
+function info(id){var d=D[id];if(!d)return;var r=R.filter(function(a){return a[0]==id})[0];
+P.innerHTML='<div class="big">'+(r[6]||"📍")+'</div><h2>'+(r[7]?(r[7]+(r[8]&&r[5]!="com"?" "+r[8]:"")):id)+'</h2><span class="pill" style="--c:var('+K[r[5]][1]+')">'+K[r[5]][0]+'</span><p>'+d[0]+'</p>'+d[1].map(function(x){return '<div class="st"><b>Catatan</b>'+x+'</div>'}).join("")+(RT[id]?'<button class="b p" type="button" data-go="'+id+'">Tampilkan rute</button>':'')}
+function home(){P.innerHTML='<div class="big">🧭</div><h2>Selamat datang</h2><p>Pintu utama ada tepat di tengah bagian bawah gedung. Dari lobi, lurus ke ruang tunggu dan resepsionis. Bidang Teknis di kiri dan Bidang TU di kanan saling berhadapan. Koridor ke kiri menuju aula dan pintu kedua (taman, masjid, parkir umum); ke kanan menuju Kagabtum, gudang, WC, wudhu, dan tangga.</p><div class="st"><b>Tips</b>Ketuk ruangan mana saja untuk detailnya.</div>'}
+function mark(id){document.querySelectorAll(".r.on").forEach(function(n){n.classList.remove("on")});var n=document.getElementById("r-"+id);if(n)n.classList.add("on")}
+function go(id){var r=RT[id];sel.value=id;var g=document.getElementById("rt");if(!r){g.innerHTML="";return}
+g.innerHTML='<path class="rb" d="'+r[0]+'"/><path class="rt" d="'+r[0]+'"/>';
+if(D[id]){mark(id);info(id)}else{mark("");P.innerHTML='<div class="big">🚪</div><h2>Pintu Kedua</h2><p>Pintu kaca di ujung kiri koridor. Di luarnya ada parkir umum, taman cafe, dan masjid.</p>'}
+P.insertAdjacentHTML("beforeend",'<div class="st"><b>Rute dari pintu utama</b>'+r[1]+'</div>')}
+v.addEventListener("click",function(ev){var g=ev.target.closest(".r");if(!g)return;var id=g.id.slice(2);mark(id);info(id);if(RT[id])go(id)});
+v.addEventListener("keydown",function(ev){if(ev.key=="Enter"&&ev.target.classList.contains("r"))ev.target.dispatchEvent(new MouseEvent("click",{bubbles:true}))});
+P.addEventListener("click",function(ev){var b=ev.target.closest("[data-go]");if(b)go(b.dataset.go)});
+sel.addEventListener("change",function(){if(sel.value)go(sel.value)});
+document.getElementById("x").addEventListener("click",function(){document.getElementById("rt").innerHTML="";sel.value="";mark("");home()});
+home();
+})();
+</script></body></html>
